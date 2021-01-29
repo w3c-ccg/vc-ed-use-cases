@@ -1,5 +1,5 @@
 ---
-name: USe Case Template
+name: Use Case Template
 about: Use this template to submit a use case
 title: "[USE CASE]"
 labels: ''
