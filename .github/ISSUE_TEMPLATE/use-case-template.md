@@ -7,6 +7,10 @@ assignees: ''
 
 ---
 
+## Instructions
+
+please fill out all of the following information that you can. Don't worry if you can't fill in everything; any info you can provide is helpful!
+
 ## Actor
 
 who is performing the actions in the use case
@@ -28,7 +32,7 @@ any standards, systems or technologies which MUST be used in terms of the use ca
 
 ## Tags
 
-select any of the below that apply and/or add your own at the bottom:
+Select any of the below that apply and/or add your own at the bottom. 
 
 - [ ] issuer-to-subject
 - [ ] subject-to-relying-party
@@ -43,3 +47,10 @@ select any of the below that apply and/or add your own at the bottom:
 - [ ] multiple-issuers (i.e. multiple parties involved in credential issuance)
 
 Add your own...
+
+### Tag Details
+
+Provide a quick explanation of why you added these tags. E.g.:
+
+- issuer-to-subject: added because ...
+- ...
