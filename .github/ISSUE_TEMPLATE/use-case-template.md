@@ -45,6 +45,8 @@ Select any of the below that apply and/or add your own at the bottom.
 - [ ] informal
 - [ ] e2e (i.e. issuer-to-subject-to-relying-party)
 - [ ] multiple-issuers (i.e. multiple parties involved in credential issuance)
+- [ ] single credential
+- [ ] complex credential
 
 Add your own...
 
