@@ -145,33 +145,33 @@ Credentials Data Model</a>.
     <section class="introduction">
       <h2>Introduction</h2>
       <p>
-        The Verifiable Credentials for Education Task Force [<a href="https://w3c-ccg.github.io/vc-ed/charter/">Charter</a>] is exploring the use of Verifiable Credentials (VC) that represent formal, informal, and non-formal education, employment, and achievement credentials. This effort attempts to bridge the VC ecosystem to the robust work already done in the education and training data standards space. Work in this task force is based on use cases. The use cases below have been provided by participants in the community and across a diverse education and employment credentialing network. Some use cases will exist but others may be theoretical.
+        The Verifiable Credentials for Education Task Force (<a href="https://w3c-ccg.github.io/vc-ed/charter/">Charter</a>) is exploring the use of Verifiable Credentials (VC) that represent formal, informal, and non-formal education, employment, and achievement credentials. This effort attempts to bridge the VC ecosystem to the robust work already done in the education and training data standards space. Work in this task force is based on use cases. The use cases below have been provided by participants in the community and across a diverse education and employment credentialing network. Some use cases will exist but others may be theoretical.
       </p>
 
       <h3>Importance of this Work</h3>
       
-      <p>Learning, employment, and achievement claims come in many forms: formal, informal, non-formal learning, including degrees, diplomas, certifications, micro-credentials, badges, professional qualifications, recognition of prior learning, etc. Many education data standards and international conventions exist to describe these claims (also called descriptive payloads or achievement descriptions). This includes several that are intended to be used for digital credentialing and have their own methods for verification. </p>
+      <p>Learning, employment, and achievement claims come in many forms: formal, informal, and non-formal learning, including degrees, diplomas, certifications, micro-credentials, badges, professional qualifications, recognition of prior learning, etc. Many education data standards and international conventions exist to describe these claims (also called descriptive payloads or achievement descriptions). This includes several that are intended to be used for digital credentialing and have their own methods for verification. </p>
 
-      <p>Standardization of digital claim technologies makes it possible for many stakeholders to issue, earn, and trust these essential records about their counterparties, without being locked into proprietary platforms.https://www.w3.org/TR/vc-use-cases/#importance-of-this-work [Verifiable Credentials Use Cases] The challenge in learning, employment, and achievements is to standardize verification while providing a structure for the description payloads to be inserted. 
+      <p>Standardization of digital claim technologies makes it possible for many stakeholders to issue, earn, and trust these essential records about their counterparties, without being locked into proprietary platforms <cite><a href="hhttps://www.w3.org/TR/vc-use-cases/#importance-of-this-work">([Verifiable Credentials Use Cases], section 1.1)</a></cite>. The challenge in learning, employment, and achievements is to standardize verification while providing a structure for the description payloads to be inserted. 
       </p>
       <p>This work provides a way for these claims to be delivered cryptographically verifiably in the control of individuals who are the subjects of the claims giving them immediate access to information about them and the freedom to choose who or what to share this data with.</p>
 
       <h3>Format of this Document</h3>
 
-      <p>User roles describe the types of stakeholders that will be involved with verifiable credentials. The user needs section describes different types of credentials and scenarios of how they could be used. The user tasks section describes the actions of the different stakeholders. The technology needs section describes use cases illustrating what is needed by technology in this space.</p>
+      <p>This document is formatted into four sections to help describe the entities involved, why they could use verifiable credentials, how they could use them, and what is needed by the technologies. User roles describe the types of stakeholders that will be involved with verifiable credentials. The user needs section describes different types of credentials and scenarios of how they could be used. The user tasks section describes the actions of the different stakeholders. The technology needs section describes use cases illustrating what is needed by technologies in this space.</p>
     </section>
     <section class="user-roles">
       <h2>User Roles</h2>
-      <p>The Verifiable Credentials standard mentions four roles: Subject, Holder, Issuer, Verifier. Reliant Third Party has been added in this context to aid with understandability because the verifier may not always be the party using the data.</p>
+      <p>The Verifiable Credentials standard mentions four roles: Subject, Holder, Issuer, and Verifier. Additional roles and details have been added in this document to describe the entities that are participating in education verifiable credentialing ecosystems.</p>
 
      <h3>Subject</h3>  
-     <p>The entity, such as a student or employee, about whom a claim is issued.</p>
+     <p>The entity, typically  a person such as a student or employee, about whom a claim is issued.</p>
 
      <h3>Holder</h3>  
-     <p>A role an entity, such as a student or employee, may perform by possessing one or more verifiable credentials. A holder is usually, but not always, the subject of the verifiable credentials that they are holding. Holders store their credentials in credential repositories.</p>
+     <p>The entity, typically a person such as a student or employee, who may also be the subject of the claim, that can prove control of the verifiable credential containing the claim.</p>
 
      <h3>Issuer</h3>  
-     <p>The entity, an institution, employer, and even an individual that creates a claim and associates it with a particular subject.</p>
+     <p>The entity, which could be an organization such as an educationa institution or employer but also could an individual including the subject or holder, that creates the claim.</p>
 
      <h4>Formal Institutions</h4>  
      <p>A university issues a diploma in the form of a verifiable credential.</p>
@@ -192,10 +192,10 @@ Credentials Data Model</a>.
      <p>An individual endorses the skills of their colleagues.</p>
 
      <h3>Issuer Platform Provider</h3>  
-     <p>The entity that provides the technology. This may be the Issuer or it may serve as the agent of trust/proxy on behalf of the Issuer. The distinction should be made because decisions about the technology are made by the provider.</p>
+     <p>The entity that provides the technology. This may be the issuer or it may serve as the agent of trust/proxy on behalf of the issuer. The distinction should be made because decisions about the technology are made by the provider.</p>
 
      <h3>Wallet</h3>  
-     <p>A software system that serves as a data repository used to store, manage, protect, share, and present digital credentials and assets. [universal wallet]</p>
+     <p>A software system that serves as a data repository used to store, manage, protect, share, and present digital credentials and assets. <cite><a href="https://w3c-ccg.github.io/universal-wallet-interop-spec/">[Universal Wallet 2020]</cite></p>
 
      <h3>Verifier</h3>  
      <p>The entity verifying a claim about a given subject. [] This could be an agent representing an employer or an employer.</p>
@@ -209,7 +209,7 @@ Credentials Data Model</a>.
      <h3>Trust Registries</h3>  
      <p>Trust registries can be a container or set of containers, services, databases, ledgers etc., that verifiers can use to look up information such as issuer identity & profile information, credential descriptions, and rules associated with credentials. The intent of the registries is to provide a source of information for claims to be verified without contacting the issuer and prevent tracking of verification requests. If issuers serve as registries, then the privacy of the verification may be at risk because then the issuer could become aware of any instance when a credential that they issued is being used. </p>
 
-     <p>In education, trust registries and governance are often conflated with accreditation bodies. While accreditation bodies may participate in or even host trust registries, the purposes are different in that accreditation bodies evaluate the educational institution and provide information based on that whereas trust registers in the verifiable credentials context are related to credential data specifically not the perceived value of the experiences that the data represents.</p>
+     <p>In education, trust registries and governance are often conflated with accreditation bodies. While accreditation bodies may participate in or even host trust registries, the purposes are different in that accreditation bodies evaluate the educational institution and provide information based on that whereas trust registries in the verifiable credentials context are related to verifiability of credential data specifically not the perceived value of the experiences that the data represents.</p>
     </section>
 
     <section class="user-needs">
