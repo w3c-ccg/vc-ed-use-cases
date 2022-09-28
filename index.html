@@ -131,8 +131,7 @@ td, th {
   <body>
     <section id='abstract'>
       <p>
-Diplomas, licenses, certifications, certificates, micro-credentials, badges, and other types of achievement recognition and credentials in education and employment are increasingly being issued in digital formats that require different methods of demonstrating integrity than paper documents. These digital credentials when issued as W3C Verifiable credentials can be asserted as cryptographically secure, privacy-respecting, machine-verifiable, and interoperable verifiable credentials. This gives individuals access to and control over their achievement data when they need it and throughout their lifetimes. This document outlines user roles in this ecosystem and use cases documented by the Verifiable Credentials for Education Task Force community that describe user needs, user tasks, and technology needs.
-      </p>
+Diplomas, licenses, certifications, certificates, micro-credentials, badges, and other types of achievement recognition and credentials in education and employment are increasingly being issued in digital formats that require different methods of demonstrating integrity than paper documents. These digital credentials when issued as <a Href="https://www.w3.org/TR/vc-data-model">W3C Verifiable Credentials</a> can be asserted as cryptographically secure, privacy-respecting, machine-verifiable, and interoperable <a href="https://www.w3.org/TR/vc-data-model/#dfn-verifiable-credentials">verifiable credentials</a>. This gives individuals access to and control over their achievement data when they need it and throughout their lifetimes. This document outlines user roles in this ecosystem and use cases documented by the <a href="https://w3c-ccg.github.io/vc-ed/">Verifiable Credentials for Education Task Force</a> community that describe user needs, user tasks, and technology needs.</p>
     </section>
 
     <section id='sotd'>
@@ -143,61 +142,61 @@ Credentials Data Model</a>.
     </p>
     </section>
 
-    <section class="introduction">
+    <section id="introduction">
       <h2>Introduction</h2>
       <p>
-        The Verifiable Credentials for Education Task Force is exploring the use of Verifiable Credentials (VC) that represent formal, informal, and non-formal education, employment, and achievement credentials. This effort attempts to bridge the VC ecosystem to the robust work already done in the education and training data standards space. Work in this task force is based on use cases. The use cases below have been provided by participants in the community and across a diverse education and employment credentialing network. Some use cases will exist but others may be theoretical.
+        The Verifiable Credentials for Education Task Force (<a href="https://w3c-ccg.github.io/vc-ed/charter/">Charter</a>) is exploring the use of Verifiable Credentials (VC) that represent formal, informal, and non-formal education, employment, and achievement credentials. This effort attempts to bridge the VC ecosystem to the robust work already done in the education and training data standards space. Work in this task force is based on use cases. The use cases below have been provided by participants in the community and across a diverse education and employment credentialing network. Some use cases will exist but others may be theoretical.
       </p>
 
       <h3>Importance of this Work</h3>
-      <p>Entities (people, organizations, devices) need to make many kinds of claims as part of their everyday activities. As more and more of these important activities move to the Internet, entities need to be able to transmit instantly verifiable claims. From educational records to payment account access, the next generation of web applications will authorize entities to perform actions based on rich sets of credentials issued by trusted parties. Human and machine-mediated decisions about job applications, account access, collaboration, and professional development will depend on filtering and analyzing growing amounts of data. It is essential that data be verifiable.</p>
+      
+      <p>Learning, employment, and achievement claims come in many forms: formal, informal, and non-formal learning, including degrees, diplomas, certifications, micro-credentials, badges, professional qualifications, recognition of prior learning, etc. Many education data standards and international conventions exist to describe these claims (also called descriptive payloads or achievement descriptions). This includes several that are intended to be used for digital credentialing and have their own methods for verification. </p>
 
-      <p>Learning, employment, & achievement claims come in many forms: formal, informal, non-formal, diplomas, certifications, micro-credentials, badges, etc. Many education data standards exist to describe these claims (also called descriptive payloads or achievement descriptions). This includes several that are intended to be used for digital credentialing and have their own methods for verification. </p>
-
-      <p>Standardization of digital claim technologies makes it possible for many stakeholders to issue, earn, and trust these essential records about their counterparties, without being locked into proprietary platforms.https://www.w3.org/TR/vc-use-cases/#importance-of-this-work [Verifiable Credentials Use Cases] The challenge in learning, employment, and achievements is to standardize verification while providing a structure for the description payloads to be inserted. 
+      <p>Standardization of digital claim technologies makes it possible for many stakeholders to issue, earn, and trust these essential records about their counterparties, without being locked into proprietary platforms <cite><a href="hhttps://www.w3.org/TR/vc-use-cases/#importance-of-this-work">([Verifiable Credentials Use Cases], section 1.1)</a></cite>. The challenge in learning, employment, and achievements is to standardize verification while providing a structure for the description payloads to be inserted. 
       </p>
       <p>This work provides a way for these claims to be delivered cryptographically verifiably in the control of individuals who are the subjects of the claims giving them immediate access to information about them and the freedom to choose who or what to share this data with.</p>
 
       <h3>Format of this Document</h3>
 
-      <p>User roles describe the types of stakeholders that will be involved with verifiable credentials. The user needs section describes different types of credentials and scenarios of how they could be used. The user tasks section describes the actions of the different stakeholders. The technology needs section describes use cases illustrating what is needed by technology in this space.</p>
+      <p>This document is formatted into four sections to help describe the entities involved, why they could use verifiable credentials, how they could use them, and what is needed by the technologies. User roles describe the types of stakeholders that will be involved with verifiable credentials. The user needs section describes different types of credentials and scenarios of how they could be used. The user tasks section describes the actions of the different stakeholders. The technology needs section describes use cases illustrating what is needed by technologies in this space.</p>
     </section>
-    <section class="user-roles">
+
+    <section id="user-roles">
       <h2>User Roles</h2>
-      <p>The Verifiable Credentials standard mentions four roles: Subject, Holder, Issuer, Verifier. Reliant Third Party has been added in this context to aid with understandability because the verifier may not always be the party using the data.</p>
+      <p>The Verifiable Credentials standard mentions four roles: Subject, Holder, Issuer, and Verifier. Additional roles and details have been added in this document to describe the entities that are participating in education verifiable credentialing ecosystems.</p>
 
      <h3>Subject</h3>  
-     <p>The entity, such as a student or employee, about whom a claim is issued.</p>
+     <p>The entity, typically a person such as a student or employee, about whom a claim is issued.</p>
 
      <h3>Holder</h3>  
-     <p>A role an entity, such as a student or employee, may perform by possessing one or more verifiable credentials. A holder is usually, but not always, the subject of the verifiable credentials that they are holding. Holders store their credentials in credential repositories.</p>
+     <p>The entity, typically a person such as a student or employee, who may also be the subject of the claim, that can prove control of the verifiable credential containing the claim.</p>
 
      <h3>Issuer</h3>  
-     <p>The entity, an institution, employer, and even an individual that creates a claim and associates it with a particular subject.</p>
+     <p>The entity, which could be an organization such as an educationa institution or employer but also could be an individual including the subject or holder, that creates the claim.</p>
 
-     <h4>Formal Institutions</h4>  
-     <p>A university issues a diploma in the form of a verifiable credential.</p>
+        <h4>Employer</h4>  
+        <p>A small company issues verifiable credentials to employees for their achievements at the company. These credentials are evaluated internally to support promotions and reviews. Employees may export them to wallets to be used to prove employment history.</p>
 
-     <h4>Non-formal Education Organization</h4>  
-     <p>A community organization teaches residents of a town how to participate in a recycling program. Upon receipt of a verifiable credential, residents are able to register for recycling pick up at their homes.</p>
+        <h4>Formal Institutions</h4>  
+        <p>A university issues a diploma in the form of a verifiable credential.</p>
 
-     <h4>Informal Education Organization or Individual</h4>  
-     <p>An app teaching lessons about cooking and cooking safety issues a verifiable credential when quizzes are completed successfully.</p>
+        <h4>Individual/Peer</h4>  
+        <p>An individual endorses the skills of their colleagues.</p>
 
-     <h4>Licensure or Certification Body</h4>  
-     <p>A physical therapist candidate passes an exam and is licensed to practice by a licensure body.</p>
+        <h4>Informal Education Organization or Individual</h4>  
+        <p>An app teaching lessons about cooking and cooking safety issues a verifiable credential when quizzes are completed successfully.</p>
 
-    <h4>Employer</h4>  
-     <p>A small company issues verifiable credentials to employees for their achievements at the company. These credentials are evaluated internally to support promotions and reviews. Employees may export them to wallets to be used to prove employment history.</p>
+        <h4>Licensure or Certification Body</h4>  
+        <p>A physical therapist candidate passes an exam and is licensed to practice by a licensure body.</p>
 
-     <h4>Individual/Peer</h4>  
-     <p>An individual endorses the skills of their colleagues.</p>
+        <h4>Non-formal Education Organization</h4>  
+        <p>A community organization teaches residents of a town how to participate in a recycling program. Upon receipt of a verifiable credential, residents are able to register for recycling pick up at their homes.</p>
 
-     <h3>Issuer Platform Provider</h3>  
-     <p>The entity that provides the technology. This may be the Issuer or it may serve as the agent of trust/proxy on behalf of the Issuer. The distinction should be made because decisions about the technology are made by the provider.</p>
+     <h3>Issuer Platform Provider</h3>
+     <p>The entity that provides the technology. This may be the issuer or it may serve as the agent of trust/proxy on behalf of the issuer. The distinction should be made because decisions about the technology are made by the provider.</p>
 
      <h3>Wallet</h3>  
-     <p>A software system that serves as a data repository used to store, manage, protect, share, and present digital credentials and assets. [universal wallet]</p>
+     <p>A software system that serves as a data repository used to store, manage, protect, share, and present digital credentials and assets. <cite><a href="https://w3c-ccg.github.io/universal-wallet-interop-spec/">[Universal Wallet 2020]</a></cite></p>
 
      <h3>Verifier</h3>  
      <p>The entity verifying a claim about a given subject. [] This could be an agent representing an employer or an employer.</p>
@@ -211,19 +210,18 @@ Credentials Data Model</a>.
      <h3>Trust Registries</h3>  
      <p>Trust registries can be a container or set of containers, services, databases, ledgers etc., that verifiers can use to look up information such as issuer identity & profile information, credential descriptions, and rules associated with credentials. The intent of the registries is to provide a source of information for claims to be verified without contacting the issuer and prevent tracking of verification requests. If issuers serve as registries, then the privacy of the verification may be at risk because then the issuer could become aware of any instance when a credential that they issued is being used. </p>
 
-     <p>In education, trust registries and governance are often conflated with accreditation bodies. While accreditation bodies may participate in or even host trust registries, the purposes are different in that accreditation bodies evaluate the educational institution and provide information based on that whereas trust registers in the verifiable credentials context are related to credential data specifically not the perceived value of the experiences that the data represents.</p>
+     <p>In education, trust registries and governance are often conflated with accreditation bodies. While accreditation bodies may participate in or even host trust registries, the purposes are different in that accreditation bodies evaluate the educational institution and provide information based on that whereas trust registries in the verifiable credentials context are related to verifiability of credential data specifically not the perceived value of the experiences that the data represents.</p>
     </section>
 
-    <section class="user-needs">
+    <section id="user-needs">
       <h2>User Needs</h2>
 
       <h3>Different Types of Credentials</h3>
-      <p>Many different types of credentials are listed below. This list is not exhaustive.</p>
 
       <h4>Academic Achievements</h4>
       <p>A student is issued a verifiable credential for each academic achievement in her post-secondary career including co-curricular activities and her final diploma. She stores the verifiable credentials in a wallet application and presents them to those who request to confirm her experiences.</p>
 
-    <h4>Attendance</h4>  
+     <h4>Attendance</h4>  
      <p>Sheila completed a MOOC in Introductory Economics from the University of Göttingen. She chose not to take a 'verified/certified track'. The university issued her a verifiable credential indicating merely that she attended the course and the dates of attendance.</p>
 
     <h4>Corporate Certifications</h4>  
@@ -237,9 +235,6 @@ Credentials Data Model</a>.
 
      <h4>Enrollment</h4>  
      <p>Fawaz wishes to present proof of their enrollment at the University of Wisconsin using a verifiable credential that the university issued to him so as to access a student discount to enter a museum.</p>
-
-     <h4>Experience</h4>  
-     <p>George participated in a city-wide scavenger hunt. At every stop, he completed challenging cross-discipline puzzles which resulted in a verifiable credential being issued to his wallet containing a QR code. At the subsequent stops, the verifiable credentials were read to gain entry to the challenge.</p>
 
      <h4>Extended Transcript Published by a Registrar</h4>  
      <p>Joleen is the registrar of Mega University and, by virtue of her office, is responsible for the integrity, accuracy, and security of academic records. Joleen has been a pioneering registrar in advocating an "extended transcript" that includes not only the standard set of course grades but also adds supplementary information on learner competencies. These might include work experiences and non-educational but marketable skills. Joleen upon the request of her students, Joleen issues a verifiable credential that includes an extended transcript.</p>
@@ -260,12 +255,12 @@ Credentials Data Model</a>.
      <p>Ameilia issues herself a verifiable credential to document her job as a CNA. Amelia’s colleagues issue recommendations in the form of verifiable credentials that support this verifiable credential.</p>
 
 
-     <h4>Educational & Occupational Health Verification</h4>  
-     <p>School or employer requires proof of vaccination status.
-     </p>
-
      <h4>Professional Certification/Licensure</h4>  
      <p>A certification or license awarded for completion of a professional program is often needed to meet government regulations. These types of credentials typically have time-to-live licenses with forced expiry without renewal.
+     </p>
+
+     <h4>Recognition of Prior Learning</h4>  
+     <p>Josephina decided to return to college to finish her bachelors degree. The college she attended evaluated her work experience and determined that skills and knowledge that she attained while working qualified to replace several of the courses required for the degree.
      </p>
 
      <h4>Self-Assertion</h4>  
@@ -282,14 +277,23 @@ Credentials Data Model</a>.
     <h4>Access to LMS & Roles</h4>  
      <p>A professor wants to use her school-issued credentials to create assignments for students. A student wants to access their assignments and their grades which are viewable only by the students and the professor.</p>
 
-     <h4>Apply to College/Scholarship</h4>  
-     <p>Geraldine is a high school student and is using their Open Badges as part of an application to attend college.</p>
+     <h4>Apply to University/Scholarship</h4>  
+     <p>Geraldine is a high school student and is using their Open Badges as part of an application to attend university.</p>
 
     <h4>Apply for a Job</h4>  
      <p>Jo has experience working in restaurants and retail. She moves to another state and when she applies for jobs at the restaurants in her new neighborhood, she can provide verifiable proof of previous employment and credentials that describe her mastery of skills.</p>
 
      <h4>Container for Other Credentials</h4>  
      <p>A teacher uploads certifications, licenses, and test scores in the form of PDFs, Open Badges, and other data formats to a publishing service. On request of the teacher, the service issues a verifiable credential containing the other credentials which the teacher can put in their wallet application.</p>
+
+    <h4>Educational & Occupational Health Verification</h4>  
+     <p>University A requires all students to supply proof of vaccinations.</p>
+
+    <h4>Promote Access to Higher Education and Lifelong Learning, Including for  Refugees and Displaced Persons</h4>  
+     <p>Khaled fled a civil war in his home country and resettled in a new host country. In his old country he earned a bachelors degree in software engineering and would like to pursue a masters in his new country.</p>
+
+     <h4>Recognition of Experience</h4>  
+     <p>George is a frequent visitor of the maker lab at his library which has issued him verifiable credentials for his demonstrated experiences in using a soldering iron and the laser printer.</p>
 
      <h4>Qualify for a Promotion or Pay Raise</h4>  
      <p>As an employee, Gil wants to provide his employer with proof that he is certified in first aid so that he can be given the role of a designated first aid attendant in the workplace and get a raise.</p>
@@ -299,48 +303,51 @@ Credentials Data Model</a>.
 
    </section>
 
-   <section class="user-tasks">
+   <section id="user-tasks">
       <h2>User Tasks</h2>
+      The following tasks are performed by the entities as part of the verifiable credentialing processing not specifically to the education and employment domains.
 
     <h3>Issue Claim</h3>  
-     <p>It MUST be possible for any entity to issue a verifiable credential. https://www.w3.org/TR/vc-use-cases/#issue-claim</p>
+     <p>It must be possible for any entity to issue a verifiable credential <cite><a href="https://www.w3.org/TR/vc-use-cases/#issue-claim">([Verifiable Credentials Use Cases], section 4.1)</a></cite>.</p>
 
      <h3>Assert Claim</h3>  
-     <p>It MUST be possible for the holder of a verifiable credential to restrict the amount of information exposed in a credential they choose to share. It also MUST be possible for the holder to limit the duration for which that information is shared.</p>
+     <p>It must be possible for the holder of a verifiable credential to restrict the amount of information exposed in a credential they choose to share. It also must be possible for the holder to limit the duration for which that information is shared <cite><a href="https://www.w3.org/TR/vc-use-cases/#assert-claim">([Verifiable Credentials Use Cases], section 4.2)</a></cite>.</p>
 
      <h3>Verify Claim</h3>  
-     <p>It MUST be possible for a verifier to verify that the credential is an authentic statement of an issuer's claims about the subject. The verifying entity must have the capability to connect the issuer’s identity to its credential identifier and the subject's identity to their identifier as indicated in the credential. The issuer’s verification information, such as its public key, must be discoverable from the credential record and verifiably linked to the issuer. It MUST be possible to do this in an automated fashion. </p>
+     <p>It must be possible for a verifier to verify that the credential is an authentic statement of an issuer's claims about the subject. The verifying entity must have the capability to connect the issuer’s identity to its credential identifier and the subject's identity to their identifier as indicated in the credential. The issuer’s verification information, such as its public key, must be discoverable from the credential record and verifiably linked to the issuer. It must be possible to do this in an automated fashion. <cite><a href="https://www.w3.org/TR/vc-use-cases/#verify-claim">([Verifiable Credentials Use Cases], section 4.3)</a></cite></p>
 
      <h3>Check Veracity of Claim</h3>  
-     <p>Additional application-, domain-, or business-specific checks for determining whether the VC or VP fits the intended use. This may have the effect of restricting or relaxing the acceptance of results from previous steps. </p>
+     <p>Additional application-, domain-, or business-specific checks for determining whether the VC fits the intended use. This may have the effect of restricting or relaxing the acceptance of results from previous steps <cite><a href="https://github.com/w3c-ccg/vc-api/blob/main/verification.md#veracity">(Verification, Validation, and Veracity)</a></cite>.</p>
 
      <h3>Store/Move Claim</h3>  
-     <p>It MUST be possible for the holder of a claim to store that claim in one or more credential repositories. It MUST also be possible for the holder to move a claim among credential repositories, and to do so without requesting a new claim from the claim issuer.</p>
+     <p>It must be possible for the holder of a claim to store that claim in one or more credential repositories. It must also be possible for the holder to move a claim among credential repositories, and to do so without requesting a new claim from the claim issuer. <cite><a href="https://www.w3.org/TR/vc-use-cases/#store-move-claim">([Verifiable Credentials Use Cases], section 4.4)</a></cite></p>
 
       <h3>Retrieve Claim</h3>  
-     <p>It MUST be possible for a holder to select if and which appropriate credential should be sent to a verifier. https://www.w3.org/TR/vc-use-cases/#retrieve-claim</p>
+     <p>It must be possible for a holder to select if and which appropriate credential should be sent to a verifier <cite><a href="https://www.w3.org/TR/vc-use-cases/#retrieve-claim">([Verifiable Credentials Use Cases], section 4.5)</a></cite>.</p>
 
       <h3>Revoke Claim</h3>  
-     <p>It MUST be possible for the issuer of a claim to revoke it, after which it will no longer satisfy verification procedures.</p>
+     <p>It must be possible for the issuer of a claim to revoke it, after which it will no longer satisfy verification procedures <cite><a href="https://www.w3.org/TR/vc-use-cases/#revoke-claim">([Verifiable Credentials Use Cases], section 4.6)</a></cite>.</p>
 
       <h3>Refresh Claim</h3>  
-     <p>Verifiable Credentials can expire. It is useful to provide instructions on refreshing the credential for the times when expiration is imminent or has already occurred. The refresh can be performed manually or, with the prior consent of the credential holder, automatically. </p>
+     <p>Verifiable Credentials can expire. It is useful to provide instructions on refreshing the credential for the times when expiration is imminent or has already occurred. The refresh can be performed manually or, with the prior consent of the credential holder, automatically <cite><a href="https://w3c-ccg.github.io/vc-refresh-2021/">(Verifiable Credential Refresh 2021)</a></cite>.</p>
 
-      <h3>Update Claim</h3>  
+    <h3>Update Claim</h3>  
      <p>It may be requested that updates be made to a descriptive payload after it has been issued. Edits to the payload such as minor text corrections may not affect meaning but more substantive edits such as changing a description or criteria would affect the meaning. Currently, there is no mechanism to support this except to revoke and reissue when agreed upon by both issuer and subject.</p>
 
   </section>
- <section class="tech-needs">
+ <section id="tech-needs">
 
-  <h3>Identity</h3>  
+<h2>Technology Needs</h2>
 
-  <h4>Credential is Issued to an Email Address and then to a Decentralized Identifier</h4>
-     <p>Krystal has been issued several Open Badges to her personal email address. She’d like to put the badges in her VC Wallet and associate those credentials with the DID she creates and controls from that wallet.</p>
+  <h3>Identitfier</h3>  
 
-     <h4>Learner Wishes to Change Decentralized Identifier Associated with the Credential</h4>
-     <p>Arne was the subject of a VC that described his diploma. He accidentally deleted the private key associated with the DID that is the identity associated with this diploma.</p>
+  <h4>Change Identifier from Email to Decentralized Identifier</h4>
+    <p>Krystal has been issued several Open Badges to her personal email address. She’d like to put the badges in her VC Wallet and associate those credentials with the DID she creates and controls from that wallet.</p>
 
-     <h3>Display Online</h3>  
+    <h4>Learner Wishes to Change Decentralized Identifier Associated with the Credential</h4>
+    <p>Arne was the subject of a VC that described his diploma. He accidentally deleted the private key associated with the DID that is the identity associated with this diploma.</p>
+
+    <h3>Display Online</h3>  
 
     <h4>Viewable Online</h4>
     <p>René’s verifiable digital credential is viewable online by those who do not have access to verifiable credentials verifying services. The online view may or may not display the verification status of René’s credential.</p>
@@ -370,11 +377,11 @@ Credentials Data Model</a>.
 
     <h4>Include Assets to Support the Claim</h4>
 
-    <h5>University Y’s igital student IDs contain a photo of the student's faces</h5>
+    <p>University Y’s digital student IDs contain a photo of the student's faces</p>
 
-    <h5>Professional license contains a printable certificate</h5>
+    <p>Professional license contains a printable certificate</p>
 
-    <h5>Student’s badge contains a photo documenting their final project</h5>
+    <p>Student’s badge contains a photo documenting their final project</p>
 
 
     <h3>Resource Linking</h3> 
@@ -382,7 +389,11 @@ Credentials Data Model</a>.
     <h4>Credentials Reference to Other Credentials</h4>
     <p>Roy’s verifiable digital credential certificate is linked to four other digital credential certificates that were earned in the same training program.</p>
 
+    <p>A verifiable credential is issued containing Peter's endorsement and a link to a colleague's verifiable credential containing a self-assertion of their skills.</p>
+
     <h4>Reference Learner Artifacts & Assets</h4>
+    <p>Jo Jo’s digital badge contains an array of links to files and websites supporting her self-assertion of software development skills.</p>
+
 
     <h3>Multiple Digital Signatures</h3> 
 
@@ -395,263 +406,106 @@ Credentials Data Model</a>.
     <h3>Accessibility</h3> 
 
     <h4>WCAG 2.1 AA Compliant</h4>
+    <p>Make content more accessible to a wider range of people with disabilities, including accommodations for blindness and low vision, deafness and hearing loss, limited movement, speech disabilities, photosensitivity, and combinations of these, and some accommodation for learning disabilities and cognitive limitations <cite><a href="https://www.w3.org/TR/WCAG21/">([Web Content Accessibility Guidelines (WCAG)], 2.1)</a></cite>. 
 
-    <h4>504/508 Compliance</h4>
+    <h4>504/508 Compliance (United States)</h4>
+    <p>Section 504 states: “No otherwise qualified individual with a disability in the United States . . . shall, solely by reason of her or his disability, be excluded from the participation in, be denied the benefits of, or be subjected to discrimination under any program or activity receiving Federal financial assistance . . . ." <cite><a href="https://www2.ed.gov/about/offices/list/ocr/504faq.html">(Protecting Students With Disabilities)</a></cite></p>
+
+    <p>Section 508 requires that Federal agencies' electronic and information technology is accessible to people with disabilities, including employees and members of the public. <cite><a href="https://www.ada.gov/508/">(SECTION 508 SURVEYS and REPORTS)</a></cite></p>
 
     <h4>Limited Technology Access</h4>
+    Gerardo is attending training that provides certification for heavy equipment use. The training system provides the ceritifcation digitally but Gerardo does not have access to a portable computer or mobile device.
+
+    <h3>Privacy</h3>
 
     <h4>PII and Individual Data</h4>
-    <p>How muchPII should be in a VC issued to a wallet in education? FERPA example.</p>
+    <p>Seondary School questions how much personal information should be containe din a verifiable credential. For example, if they have the parents' permission can they include the student's name, attendance information, address, and grades?</p>
 
     <h4>Selective Disclosure</h4>
-    <p>Student would like to confirm that she is an active student without revealing what school she attends. </p>
+    <p>Student would like to confirm that she is an active student without revealing what school she attends.</p>
 
-    <h4>International interoperability</h4>
 
     <h3>Security Considerations</h3> 
 
-    <h3>Internationalization Considerations</h3> 
+    <h4>Outdated or Unsupported Cryptography</h4>
+    <p>Walter is using a wallet application on his mobile device that is using a cryptography suite that has demonstratrably insecure <cite><a href="https://www.w3.org/TR/vc-data-model/#cryptography-suites-and-libraries">([Verifiable Credentials Use Cases], section 8.1)</a></cite>.</p>
+
+    <h4>Content Integrity</h4>
+    <p>See <a href="#resource-linking">Resource Linking</a> <cite><a href=" https://www.w3.org/TR/vc-data-model/#content-integrity-protection">([Verifiable Credentials Use Cases], section 8.2)</a></cite>.</p>
+
+    <h4>Unsigned Claims</h4>
+    <p>Tracy’s digital credential does not contain a proof and is not digitally signed <cite><a href="https://www.w3.org/TR/vc-data-model/#unsigned-claims">([Verifiable Credentials Use Cases], section 8.3)</a></cite>.</p>
+
+    <h4>Preventing a Man-in-the-Middle Attack</h4>
+    <p>When recieving verifiable credentials for applications to the university, requests for verifiable presentations containing the credentials are tied to the response <cite><a href="https://www.w3.org/TR/vc-data-model/#token-binding">([Verifiable Credentials Use Cases], section 8.4)</a></cite>.</p>
+
+    <h4>Prevent Unintended Bundling of Claims</h4>
+    <p>University Y issues several verifiable credentials to individuals securely with clear description so that when the individual creates custom presentations of a sub-selection of those credentials, the individual doesn’t misrepresentthe achievements <cite><a href="https://www.w3.org/TR/vc-data-model/#bundling-dependent-claims">([Verifiable Credentials Use Cases], section 8.5)</a></cite>.</p>
+
+    <h4>Acurate Expiration Dates</h4>
+    <p>Lisa’s nursing license is set to expire every year so that she must renew and request an updated verifiable credential <cite><a href="https://www.w3.org/TR/vc-data-model/#highly-dynamic-information">([Verifiable Credentials Use Cases], section 8.6)</a></cite>.</p>
+
+    <h4>Device Theft and Impersonation</h4>
+    <p>Charles is advised by the university to enable strong authentication on his mobile device to keep his credentials secure. <cite><a href="https://www.w3.org/TR/vc-data-model/#device-theft-and-impersonation">([Verifiable Credentials Use Cases], section 8.7)</a></cite>.</p>
+
+    <h3>Global Considerations</h3>
 
     <h4>Languages</h4>
+    <p>Hannah has been issued credentials in the language of the country where she attended university and will be sharing these credentials with an institution whose primary language is another country.</p>
 
     <h4>International Interoperability</h4>
+    <p>Frank’s diploma has been issued as a verifiable credential. Many educational systems worldwide are able to verify and consume this credential because it is aligned with the W3C Verifiable Credentials Specification.</p>
 
-    <h3>General Data Protection Regulation/GDPR</h3> 
+    <h4>Privacy</h4>
+    <p>Because of GDPR, Laura’s training certificate credential continues to be verifiable even though the her account and data has been removed from the training platform.</p>
 
-    <h2>Security Considerations</h3> 
+    <h4>Data Models</h4>
+    <p>Ian’s education credentials issued in the US are verifiable credentials but the descriptions of his achievements vary from his colleagues outside of the US who have the same education background.</p>
 
-
-
-
- </section>
-
-
-
-   <!-- <section class="informative">
-      <h2>Terminology</h2>
-
-      <div
-        data-include="./terms.html" data-oninclude="restrictReferences"></div>
-    </section>-->
-
- <!--   <section class="informative">
-      <h2>Core Concepts</h2>
-
-      <p>
-        TODO: may not need this
-      </p>
-
-    </section>-->
-
-        <section class="informative">
-      <h2>User Roles</h2>
-
-      <p>
-        TODO: just point roles in VC use cases 
-      </p>
-
-    </section>
-
-  <section>
-    <h2>User Needs</h2>
-    <p>TODO: included this from vc use cases as a template.</p>
-
-
-    <section>
-      <h3>Represent different types of credentials</h3>
-      <p>
-Details... Note that our table formatting results are different, but the following can be filled out to yield the desired grouping, and we can tweak the display later if we like.
-      </p>
-      <dl class="left dl-horizontal">
-        <dt>
-<udef>E.1 Digital transcript (for example) </udef>
-        </dt>
-        <dd>
-TODO: e.g. Joleen is the registrar of Mega University and, by virtue of her office, is responsible for the integrity, accuracy, and security of academic records. Joleen has been a pioneering registrar in advocating an "extended transcript" that includes not only the standard set of course grades but also adds supplementary information on learner competencies. These might include work experiences and non-educational but marketable skills. Upon the request of her students, Joleen issues a digital credential that includes an extended transcript.
-        </dd>
-      </dl>
-    <dl class="left dl-horizontal">
-        <dt>
-<udef>E.2 Grade Point Average</udef>
-        </dt>
-        <dd>
-A high school wishes to document all the grades which a student has achieved over their high-school lifetime, but also present the summative grade (a GPA) that is based on these grades
-        </dd>
-      </dl>
-    <dl class="left dl-horizontal">
-        <dt>
-<udef>E.3 Certificate of Attendance</udef>
-        </dt>
-        <dd>
-Tanya has completed a MOOC in Introductory Economics from the University of Gottingen. She has chosen not to take a 'verified/certified track'. The university issues her a credential indicating merely that she attended the course, and the dates of attendance.
-        </dd>
-      </dl>
-    <dl class="left dl-horizontal">
-        <dt>
-<udef>E.4 Certificate of Enrolment</udef>
-        </dt>
-        <dd>
-Fawaz wishes to present proof of their enrolment at the University of Wisconsin, so as to access a student discount to enter a museum.
-        </dd>
-      </dl>  
-      <h3>Link credentials to verified issuers</h3>
-      <p>
-Since certain credentials may only be issued by accredited institutions, we wish to be able to verify an institution's licence/accreditation to issue.
-      </p>
-      <dl class="left dl-horizontal">
-        <dt>
-<udef>E.1 University Degree </udef>
-        </dt>
-        <dd>
-The Quality Assurance Agency in Malta has accredited the University of Gozo as an official university. This entitles it to issue credentials which are of type 'degree'. The university wishes to display its accreditation to do so in credentials issued to students.
-        </dd>
-      </dl>
-      <dl class="left dl-horizontal">
-        <dt>
-<udef>E.2 Corporate Certifications </udef>
-        </dt>
-        <dd>
-A technology company authorises schools around the world to issue certifications, which indicate that the graduate is an expert in supporting customers using their products. The certificates issued by students must indicate that these certificates were issued with the permission of the parent company, even though the certificates are issued by individual schools.
-        </dd>
-      </dl>         
-    </section>
-
+    <h4>Governance</h4>
+    <p>Lucille’s credentials are issued by organizations participating in a trust registry hosted by the government where the institutions are located. Jason’s credentials are issued by organizations participating in a trust registry hosted by an accreditation body.</p>
 </section>
 
-
-  <section>
-    <h2>Focal Use Cases</h2>
-    <p>
-Focal Use Cases are meant to provide examples where a blend of features from
-<a>verifiable credentials</a> standard may be used together to solve complex
-or challenging marketplace needs.
-    </p>
-    <section>
-      <h3>Focal Use Case 1</h3>
-        <h4>Background</h4>
-        <p>
-Background of focal use case 1
-        </p>
-        <h4>Distinction</h4>
-        <p>
-Distinction...
-        </p>
-        <h4>Scenario</h4>
-        <p>
-Scenario...
-        </p>
-        <h4>Verifiable Credentials</h4>
-        <dl class="dl-horizontal">
-          <dt>
-Credential type...
-          </dt>
-          <dd>
-What it does...
-          </dd>
-
-        </dl>
-
-        <h4>Verifiable Presentation</h4>
-        <p>
-A <a>verifiable presentation</a> which includes ...along with the assertions that &mdash;
-        </p>
-        <ul>
-          <li>
-assertion 1
-          </li>
-          <li>
-assertion 2
-          </li>
-        </ul>
-        <h4>Trust Hierarchy</h4>
-        <p>
-TODO: trust hierarchty
-        </p>
-        <h4>Threat model</h4>
-        <ul>
-          <li>
-<strong>Threat: the threat</strong> description of the threat
-            <ul>
-              <li>
-<strong>Response:</strong> response 1
-              </li>
-            </ul>
-          </li>
-        </ul>
+    <section id="acknowledgements"class="appendix">
+        <h2>Acknowledgements</h2>
+        <p>The use cases in this document have been submitted by members VC-EDU Task Force community and participants at the T3 Innovation Network.</p>
     </section>
-  </section>
 
+    <section id="references" class="appendix">
+        <h2>References</h2>
 
-  <section class="informative">
-    <h2>Security Considerations</h2>
+        <dl>
+            <dt>[Universal Wallet 2020]</dt>
 
-    <p>
-There are a number of security considerations that implementers should be
-aware of when processing data described by this specification. Ignoring or
-not understanding the implications of this section can result in
-security vulnerabilities.
-    </p>
+            <dd><cite><a href="https://w3c-ccg.github.io/universal-wallet-interop-spec/">Universal Wallet 2020</a></cite>,
+                O. Steele, M. Johnson, G. Dardelet, M. Prorock, S. Shetty, K. Hamilton Duffy. W3C Editor's Draft 30 August 2022. URL: https://w3c-ccg.github.io/universal-wallet-interop-spec/
+            </dd>
 
-    <p>
-While this section attempts to highlight a broad set of security
-considerations, it is not a complete list. Implementers are urged to seek the
-advice of security and cryptography professionals when implementing mission
-critical systems using the technology outlined in this specification.
-    </p>
+            <dt>[Verifiable Credentials]</dt>
 
-    <p class="issue">
-Write security considerations.
-    </p>
+            <dd><cite><a href="https://www.w3.org/TR/vc-data-model/">Verifiable Credentials Data Model v1.1</a></cite>,
+                M.Sporny, G.Noble, D. Longley, D.C. Burnett, B. Zundel, K. Den Hartog. W3C Verifiable Credentials Working Group. W3C Recommendation 09 November 2021. URL: https://www.w3.org/TR/vc-data-model/
+            </dd>
 
-  </section>
+            <dt>[Verifiable Credential Refresh 2021]</dt>
 
-  <section class="informative">
-    <h2>Accessibility Considerations</h2>
+            <dd><cite><a href="https://w3c-ccg.github.io/vc-refresh-2021/">Verifiable Credential Refresh 2021</a></cite>,
+                M. Sporny, D. Zagidulin. W3C Draft Community Group Report 14 February 2022. URL: https://w3c-ccg.github.io/vc-refresh-2021/
+            </dd>
 
-    <p>
-There are a number of accessibility considerations implementers should be
-aware of when processing data described in this specification. As with any web
-standards or protocols implementation, ignoring accessibility issues makes
-this information unusable to a large subset of the population. It is important
-to follow accessibility guidelines and standards, such as [[WCAG21]], to ensure
-all people, regardless of ability, can make use of this data. This is
-especially important when establishing systems utilizing cryptography, which
-have historically created problems for assistive technologies.
-    </p>
+            <dt>[Verifiable Credentials Use Cases]</dt>
 
-    <p>
-This section details the general accessibility considerations to take into
-account when utilizing this data model.
-    </p>
+            <dd><cite><a href="https://www.w3.org/TR/vc-use-cases/">Verifiable Credentials Use Cases</a></cite>,
+                S.McCarron; J. Andrieu; M. Stone; T. Siegman; G. Kellogg; T. Thibodeau, Jr. W3C Working Group Note 24 September 2019. URL: https://www.w3.org/TR/vc-use-cases/
+            </dd>
 
-    <p class="issue">
-Write accessibility considerations.
-    </p>
+            <dt>[Web Content Accessibility Guidelines]</dt>
 
-  </section>
-
-  <section class="informative">
-    <h2>Internationalization Considerations</h2>
-
-    <p>
-There are a number of internationalization considerations implementers should be
-aware of when publishing data described in this specification. As with any web
-standards or protocols implementation, ignoring internationalization makes it
-difficult for data to be produced and consumed across a disparate set of
-languages and societies, which would limit the applicability of the
-specification and significantly diminish its value as a standard.
-    </p>
-
-    <p>
-This section outlines general internationalization considerations to take into
-account when utilizing this data model.
-    </p>
-
-    <p class="issue">
-Write i18n considerations.
-    </p>
-
-  </section>
+            <dd><cite><a href="https://www.w3.org/TR/WCAG21/">Web Content Accessibility Guidelines (WCAG)</a></cite>,
+                A. Kirkpatrick; J. O'Connor; A. Campbell; M. Cooper. Web Content Accessibility Guidelines (WCAG) 2.1. 5 June 2018. W3C Recommendation. URL: https://www.w3.org/TR/WCAG21/ ED: https://w3c.github.io/wcag/21/guidelines/
+            </dd>
+        </dl>
+    </section>
 
   </body>
 </html>
