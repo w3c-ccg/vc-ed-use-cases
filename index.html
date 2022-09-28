@@ -337,15 +337,17 @@ Credentials Data Model</a>.
   </section>
  <section class="tech-needs">
 
-  <h3>Identity</h3>  
+<h2>Technology Needs</h2>
 
-  <h4>Credential is Issued to an Email Address and then to a Decentralized Identifier</h4>
-     <p>Krystal has been issued several Open Badges to her personal email address. She’d like to put the badges in her VC Wallet and associate those credentials with the DID she creates and controls from that wallet.</p>
+  <h3>Identitfier</h3>  
 
-     <h4>Learner Wishes to Change Decentralized Identifier Associated with the Credential</h4>
-     <p>Arne was the subject of a VC that described his diploma. He accidentally deleted the private key associated with the DID that is the identity associated with this diploma.</p>
+  <h4>Change Identifier from Email to Decentralized Identifier</h4>
+    <p>Krystal has been issued several Open Badges to her personal email address. She’d like to put the badges in her VC Wallet and associate those credentials with the DID she creates and controls from that wallet.</p>
 
-     <h3>Display Online</h3>  
+    <h4>Learner Wishes to Change Decentralized Identifier Associated with the Credential</h4>
+    <p>Arne was the subject of a VC that described his diploma. He accidentally deleted the private key associated with the DID that is the identity associated with this diploma.</p>
+
+    <h3>Display Online</h3>  
 
     <h4>Viewable Online</h4>
     <p>René’s verifiable digital credential is viewable online by those who do not have access to verifiable credentials verifying services. The online view may or may not display the verification status of René’s credential.</p>
@@ -375,11 +377,11 @@ Credentials Data Model</a>.
 
     <h4>Include Assets to Support the Claim</h4>
 
-    <h5>University Y’s igital student IDs contain a photo of the student's faces</h5>
+    <p>University Y’s digital student IDs contain a photo of the student's faces</p>
 
-    <h5>Professional license contains a printable certificate</h5>
+    <p>Professional license contains a printable certificate</p>
 
-    <h5>Student’s badge contains a photo documenting their final project</h5>
+    <p>Student’s badge contains a photo documenting their final project</p>
 
 
     <h3>Resource Linking</h3> 
@@ -387,7 +389,11 @@ Credentials Data Model</a>.
     <h4>Credentials Reference to Other Credentials</h4>
     <p>Roy’s verifiable digital credential certificate is linked to four other digital credential certificates that were earned in the same training program.</p>
 
+    <p>A verifiable credential is issued containing Peter's endorsement and a link to a colleague's verifiable credential containing a self-assertion of their skills.</p>
+
     <h4>Reference Learner Artifacts & Assets</h4>
+    <p>Jo Jo’s digital badge contains an array of links to files and websites supporting her self-assertion of software development skills.</p>
+
 
     <h3>Multiple Digital Signatures</h3> 
 
@@ -399,31 +405,49 @@ Credentials Data Model</a>.
 
     <h3>Accessibility</h3> 
 
-    <h4>WCAG 2.1 AA Compliant</h4>
+    <h3>WCAG 2.1 AA Compliant</h3>
+    <p>Make content more accessible to a wider range of people with disabilities, including accommodations for blindness and low vision, deafness and hearing loss, limited movement, speech disabilities, photosensitivity, and combinations of these, and some accommodation for learning disabilities and cognitive limitations <cite><a href="https://www.w3.org/TR/WCAG21/">(Web Content Accessibility Guidelines (WCAG) 2.1)</a></cite>. 
 
-    <h4>504/508 Compliance</h4>
+    <h3>504/508 Compliance (United States)</h3>
+    <p>Section 504 states: “No otherwise qualified individual with a disability in the United States . . . shall, solely by reason of her or his disability, be excluded from the participation in, be denied the benefits of, or be subjected to discrimination under any program or activity receiving Federal financial assistance . . . ." <cite><a href="https://www2.ed.gov/about/offices/list/ocr/504faq.html">(Protecting Students With Disabilities)</a></cite></p>
 
-    <h4>Limited Technology Access</h4>
+    <p>Section 508 requires that Federal agencies' electronic and information technology is accessible to people with disabilities, including employees and members of the public. <cite><a href="https://www.ada.gov/508/">(SECTION 508 SURVEYS and REPORTS)</a></cite></p>
+
+    <h3>Limited Technology Access</h3>
+    Gerardo is attending training that provides certification for heavy equipment use. The training system provides the ceritifcation digitally but Gerardo does not have access to a portable computer or mobile device.
 
     <h4>PII and Individual Data</h4>
-    <p>How muchPII should be in a VC issued to a wallet in education? FERPA example.</p>
+    <p>Seondary School questions how much personal information should be containe din a verifiable credential. For example, if they have the parents' permission can they include the student's name, attendance information, address, and grades?</p>
 
     <h4>Selective Disclosure</h4>
-    <p>Student would like to confirm that she is an active student without revealing what school she attends. </p>
+    <p>Student would like to confirm that she is an active student without revealing what school she attends.</p>
 
-    <h4>International interoperability</h4>
 
     <h3>Security Considerations</h3> 
 
-    <h3>Internationalization Considerations</h3> 
+    <h4>Outdated or Unsupported Cryptography</h4>
+    <p>Walter is using a wallet application on his mobile device that is using a cryptography suite that has demonstratrably insecure <cite><a href="https://www.w3.org/TR/vc-data-model/#cryptography-suites-and-libraries">([Verifiable Credentials Use Cases], section 8.1)</a></cite>.</p>
 
-    <h4>Languages</h4>
+    <h4>Content Integrity</h4>
+    <p>See <a href="#resource-linking">Resource Linking</a> <cite><a href=" https://www.w3.org/TR/vc-data-model/#content-integrity-protection">([Verifiable Credentials Use Cases], section 8.2)</a></cite>.</p>
 
-    <h4>International Interoperability</h4>
+    <h4>Unsigned Claims</h4>
+    <p>Tracy’s digital credential does not contain a proof and is not digitally signed <cite><a href="https://www.w3.org/TR/vc-data-model/#unsigned-claims">([Verifiable Credentials Use Cases], section 8.3)</a></cite>.</p>
 
-    <h3>General Data Protection Regulation/GDPR</h3> 
+    <h4>Preventing a Man-in-the-Middle Attack</h4>
+    <p>When recieving verifiable credentials for applications to the university, requests for verifiable presentations containing the credentials are tied to the response <cite><a href="https://www.w3.org/TR/vc-data-model/#token-binding">([Verifiable Credentials Use Cases], section 8.4)</a></cite>.</p>
 
-    <h2>Security Considerations</h3> 
+    <h4>Prevent Unintended Bundling of Claims</h4>
+    <p>University Y issues several verifiable credentials to individuals securely with clear description so that when the individual creates custom presentations of a sub-selection of those credentials, the individual doesn’t misrepresentthe achievements <cite><a href="https://www.w3.org/TR/vc-data-model/#bundling-dependent-claims">([Verifiable Credentials Use Cases], section 8.5)</a></cite>.</p>
+
+    <h4>Acurate Expiration Dates</h4>
+    <p>Lisa’s nursing license is set to expire every year so that she must renew and request an updated verifiable credential <cite><a href="https://www.w3.org/TR/vc-data-model/#highly-dynamic-information">([Verifiable Credentials Use Cases], section 8.6)</a></cite>.</p>
+
+    <h4>Device Theft and Impersonation</h4>
+    <p>Charles is advised by the university to enable strong authentication on his mobile device to keep his credentials secure. <cite><a href="https://www.w3.org/TR/vc-data-model/#device-theft-and-impersonation">([Verifiable Credentials Use Cases], section 8.7)</a></cite>.</p>
+
+    <h3>Global Considerations</h3>
+
 
 
 
