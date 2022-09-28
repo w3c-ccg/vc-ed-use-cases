@@ -131,7 +131,7 @@ td, th {
   <body>
     <section id='abstract'>
       <p>
-Diplomas, licenses, certifications, certificates, micro-credentials, badges, and other types of achievement recognition and credentials in education and employment are increasingly being issued in digital formats that require different methods of demonstrating integrity than paper documents. These digital credentials when issued as <a Href="https://www.w3.org/TR/vc-data-model">W3C Verifiable Credentials</a> can be asserted as cryptographically secure, privacy-respecting, machine-verifiable, and interoperable <a href="https://www.w3.org/TR/vc-data-model/#dfn-verifiable-credentials">verifiable credentials</a>. This gives individuals access to and control over their achievement data when they need it and throughout their lifetimes. This document outlines user roles in this ecosystem and use cases documented by the <a href="https://w3c-ccg.github.io/vc-ed/">Verifiable Credentials for Education Task Force</a> community that describe user needs, user tasks, and technology needs.</p>
+Diplomas, licenses, certifications, certificates, micro-credentials, badges, and other types of achievement recognition and credentials in education and employment are increasingly being issued in digital formats that require different methods of demonstrating integrity than paper documents. These digital credentials when issued as [ref-VC] can be asserted as cryptographically secure, privacy-respecting, machine-verifiable, and interoperable <a href="https://www.w3.org/TR/vc-data-model/#dfn-verifiable-credentials">verifiable credentials</a>. This gives individuals access to and control over their achievement data when they need it and throughout their lifetimes. This document outlines user roles in this ecosystem and use cases documented by the <a href="https://w3c-ccg.github.io/vc-ed/">Verifiable Credentials for Education Task Force</a> community that describe user needs, user tasks, and technology needs.</p>
     </section>
 
     <section id='sotd'>
@@ -141,10 +141,6 @@ should review alongside the <a href="https://www.w3.org/TR/vc-data-model/">Verif
 Credentials Data Model</a>.
     </p>
     </section>
-
- <!-- <section id="conformance">
-    <p>The key word MUST in this document is to be interpreted as described in <a href="https://datatracker.ietf.org/doc/html/bcp14">BCP 14</a> [<a href="#bib-rfc2119">RFC2119</a>] [<a href="#bib-rfc8174">RFC8174</a>] when, and only when, they appear in all capitals, as shown here.</p>
-    </section>-->
 
     <section class="introduction">
       <h2>Introduction</h2>
@@ -456,6 +452,42 @@ Credentials Data Model</a>.
 
     <h4>Languages</h4>
     <p>Hannah has been issued credentials in the language of the country where she attended university and will be sharing these credentials with an institution whose primary language is another country.</p>
+
+    <h4>International Interoperability</h4>
+    <p>Frank’s diploma has been issued as a verifiable credential. Many educational systems worldwide are able to verify and consume this credential because it is aligned with the W3C Verifiable Credentials Specification.</p>
+
+    <h4>Privacy</h4>
+    <p>Because of GDPR, Laura’s training certificate credential continues to be verifiable even though the her account and data has been removed from the training platform.</p>
+
+    <h4>Data Models</h4>
+    <p>Ian’s education credentials issued in the US are verifiable credentials but the descriptions of his achievements vary from his colleagues outside of the US who have the same education background.</p>
+
+    <h4>Governance</h4>
+    <p>Lucille’s credentials are issued by organizations participating in a trust registry hosted by the government where the institutions are located. Jason’s credentials are issued by organizations participating in a trust registry hosted by an accreditation body.</p>
+
+    <section class="appendix">
+        <h2>Acknowledgements</h2>
+        <p>The use cases in this document have been submitted by members VC-EDU Task Force community and participants at the T3 Innovation Network.</p>
+    </section>
+
+    <section class="appendix">
+        <h2>Acknowledgements</h2>
+        <p>Thank you to those who have contributed user stories including members VC-EDU Task Force community and participants at the T3 Innovation Network.</p>
+    </section>
+
+    <section class="appendix">
+        <h2>References</h2>
+
+        <dl>
+            <dt><a id="ref-VC" name="ref-VC">[Verifiable Credentials]</a></dt>
+
+            <dd><cite><a href="https://www.w3.org/TR/vc-data-model/">Verifiable Credentials Data Model v1.1</a></cite>,
+                M.Sporny, G.Noble, D. Longley, D.C. Burnett, B. Zundel, K. Den Hartog. W3C Verifiable Credentials Working Group. W3C Recommendation 09 November 2021. URL: https://www.w3.org/TR/vc-data-model/
+            </dd>
+        </dl>
+    </section>
+
+
 
   </section>
 
